@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KIIT Indoor Navigation</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<header><div class="logo">K</div><div><h1>KIIT Indoor Navigation</h1><small>School of Computer Science · Block A &amp; B</small></div><div class="sp"></div><button class="ib" id="devb">⚙ Debug</button><button class="ib" id="thm" title="Theme">◐</button></header>
+<main>
+<section>
+<div class="card"><input type="text" id="q" list="dl" placeholder="🔍 Search room, e.g. A105, B222, block a, 2nd floor">
+<label class="l">FROM</label><input type="text" id="from" list="dl" placeholder="Select room" value="A001">
+<div class="swr"><label class="l">TO</label><button class="swap" id="swap" type="button">⇅ Swap</button></div><input type="text" id="to" list="dl" placeholder="Select destination" value="B018">
+<div class="opts"><label><input type="checkbox" id="ns"> Avoid stairs</label><label><input type="checkbox" id="ft"> Fewer turns</label></div>
+<button class="go" id="find">FIND SHORTEST PATH</button><div class="chips"><span>Nearest to “From”:</span><button class="chip" data-n="L">🚺 Ladies</button><button class="chip" data-n="G">🚹 Gents</button><button class="chip" data-n="S">⇅ Stairs</button><button class="chip" data-n="X">⎆ Exit</button></div><div class="chips" id="rec"></div><p class="dev">Tip: click rooms on the map to set From, then To. Scroll or pinch buttons to zoom, drag to pan.</p><details class="set"><summary>Settings</summary><label>Step length (m)<input type="number" id="sl" value="0.75" step="0.05" min="0.3" max="1.2"></label><label>Walking speed (m/s)<input type="number" id="sv" value="1.4" step="0.1" min="0.5" max="2.5"></label><label>Swap left/right<input type="checkbox" id="mr" checked></label></details><datalist id="dl"></datalist></div>
+<div id="res"></div><div id="dev"></div>
+</section>
+<section><div class="tabs" id="tabs"></div><div class="map"><div class="zc"><button id="zi" title="Zoom in">+</button><button id="zo" title="Zoom out">−</button><button id="zr" title="Fit route / reset">⌖</button></div><svg id="svg" viewBox="0 0 1000 700"></svg></div><div class="legend"><span><i style="background:#6366f1">S</i>Staircase</span><span><i style="background:#0891b2">WC</i>Toilet</span><span><i style="background:#0b8f4d">⎆</i>Entry</span><span><i class="rm"></i>Room</span><span><i class="rd"></i>Corridor</span><span><i style="background:#2563eb"></i>Start</span><span><i style="background:#e11d48"></i>Destination</span></div></section>
+</main>
+<footer class="credits"><h2>Project Team</h2><p>Group project · KIIT Deemed to be University</p><div class="team"><div class="mem"><div class="av">SK</div><div><b>Suraj Kumar</b><span>Roll No. 2405693</span></div></div><div class="mem"><div class="av">BS</div><div><b>Bikramjeet Seal</b><span>Roll No. 24052456</span></div></div><div class="mem"><div class="av">DK</div><div><b>Daksh Khandelwal</b><span>Roll No. 2405712</span></div></div><div class="mem"><div class="av">SB</div><div><b>Sumit Bhatnagar</b><span>Roll No. 24052190</span></div></div><div class="mem"><div class="av">SG</div><div><b>Soumyak Gupta</b><span>Roll No. 24051212</span></div></div></div></footer>
+<script src="script.js"></script></body></html>
